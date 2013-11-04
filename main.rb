@@ -18,10 +18,10 @@ client = Twitter::REST::Client.new do |config|
 
 end
 
-get '/tweets/:username' do 
-	client.user_timeline('screename').each do |t|
+get '/tweets/:screen_name' do 
+	client.user_timeline('screen_name').each do |t|
 		return t.text
 	end
 end
 
-binding.pry
+# binding.pry
