@@ -9,16 +9,13 @@
 <h1>Recent Tweets from your friends</h1>
 
 <form>
-  Search Twitter User: <input type="text" id="search-box" placeholder="username here">
-  <button id="search-button">SEARCH</button>
+  Search Twitter User: <input  type="text" id="search-box" placeholder="username here">
+  <input type="submit" id="search-button" value="See recent tweets">
 </form>
+
+<ul id="tweet-list">
+</ul>
 
 </body>
 </html>
 
-<!-- :screen_name=>"plainpioneer",
-
-  client.user_timeline(params[:username]).each do |t|
-  	recent_tweets << t.text
-  end
-  recent_tweets.to_json -->
