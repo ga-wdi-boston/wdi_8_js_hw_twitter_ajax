@@ -2,7 +2,7 @@ require 'twitter'
 require 'pry'
 require 'dotenv'
 require 'sinatra'
-require 'sinatra/reloader' if development?
+require 'sinatra/reloader' 
 
 set :server, 'webrick'
 
@@ -21,7 +21,7 @@ end
 
 get '/tweets/:username' do 
 	recent_tweets = []
-	client.user_timeline(params[:screen_name]).each do |t|
+	client.user_timeline(params[:username]).each do |t|
 		recent_tweets << t.text
 	end
 	return recent_tweets.to_json
