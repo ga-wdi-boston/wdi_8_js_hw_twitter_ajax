@@ -43,17 +43,19 @@ var async_load_json = function(screen_name) {
 };
 
 var render_tweets = function(parsed_json) {
+	debugger;
 	var json_length,
 			tweet,
 			tweet_list,
 			i = 0;
 	json_length = parsed_json.length;
 	tweet_list = document.getElementById('tweet-list');
+	tweet_list.innerHTML = '';
 	for(;i < json_length;) {
 		tweet = parsed_json[i];
-		tweet_list.innerHTML += ('<li>' + tweet.text + '</li>');
+		tweet_list.innerHTML += ('<li>' + tweet + '</li>');
 		i = i + 1;
 	}
 };
  
-window.onload(setButtonEvent());
+window.onload = function() {setButtonEvent();};
