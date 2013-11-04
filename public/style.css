@@ -1,0 +1,36 @@
+li {
+	font-family: 'Snippet', sans-serif;
+}
+
+h1, form {
+  font-family: 'Cherry Swash', cursive;
+  
+  color: #77591e;
+}
+
+body {
+	background-color: #efcf90;
+	text-align: center;
+}
+
+#header-box {
+	max-width: 800px;
+	margin: auto;
+	text-align: center;
+	background-color: #ffbf40;
+	border: 2px #a66e01 solid;
+}
+
+#tweet_results {
+	max-width: 600px;
+	margin: auto;
+	background-color: #ffffff;
+	color: #ffaa02;
+	padding: 40px;
+	border: 2px #a66e01 solid;
+	height: 500px;
+}
+
+#tweet_results li {
+	padding: 10px;
+}
