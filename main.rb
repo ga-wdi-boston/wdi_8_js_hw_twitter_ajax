@@ -16,8 +16,6 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV["ACCESS_SECRET"]
 end
 
-# OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-
 # Gets :user's 20 most recent tweets text
 get '/recent/:user' do
   client.user_timeline(params[:user]).map(&:text).to_json
