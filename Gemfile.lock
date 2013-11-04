@@ -54,4 +54,4 @@ DEPENDENCIES
   pry
   sinatra
   sinatra-reloader
-  twitter
+  twitter (~> 5.0.0.rc.1)

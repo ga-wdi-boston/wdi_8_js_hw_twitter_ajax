@@ -17,3 +17,11 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV["ACCESS_SECRET"]
 
 end
+
+get '/tweets/:username' do 
+	client.user_timeline('screename').each do |t|
+		return t.text
+	end
+end
+
+binding.pry
