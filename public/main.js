@@ -1,5 +1,5 @@
 
-// 'use strict';
+'use strict';
 // // BLOCKING REQUEST
 // var load_json = function(url) {
 // 	var request = new XMLHttpRequest();
@@ -12,34 +12,34 @@
 // 	}
 // };
 
-// var render_dogs = function(dogs_json) {
-// 	var json_length,
-// 			dog,
-// 			dog_list,
-// 			i = 0;
-// 	json_length = dogs_json.length;
-// 	dog_list = document.getElementById('dog-list');
-// 	for(;i < json_length;) {
-// 		dog = dogs_json[i];
-// 		dog_list.innerHTML += ('<li>' + dog.name + '</li>');
-// 		i = i + 1;
-// 	}
-// };
+var render_tweets = function(tweets_json) {
+	var json_length,
+			tweet,
+			tweet_list,
+			i = 0;
+	json_length = tweets_json.length;
+	tweet_list = document.getElementById('tweet-list');
+	for(;i < json_length;) {
+		tweet = tweets_json[i];
+		tweet_list.innerHTML += ('<li>' + tweet.text + '</li>');
+		i = i + 1;
+	}
+};
 
-// var async_load_json = function(url) {
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('GET', url, true);
-//   xhr.onload = function(e) {
-//     if(xhr.readyState === 4) {
-//       if(xhr.status === 200) {
-//         var parsed_json = JSON.parse(xhr.responseText);
-//         render_dogs(parsed_json);
-//       } else {
-//       	console.error(xhr.statusText);
-//       }
-//     }
-//   };
-//   xhr.send(null);
-// };
+var async_load_json = function(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.onload = function(e) {
+    if(xhr.readyState === 4) {
+      if(xhr.status === 200) {
+        var parsed_json = JSON.parse(xhr.responseText);
+        render_tweets(parsed_json);
+      } else {
+      	console.error(xhr.statusText);
+      }
+    }
+  };
+  xhr.send(null);
+};
  
-// async_load_json('/dogs.json');
+async_load_json('/tweets.json');
