@@ -1,0 +1,6 @@
+source 'https://www.rubygems.org'
+gem 'sinatra'
+gem 'sinatra-reloader'
+gem 'twitter', github: 'sferik/twitter'
+gem 'dotenv'
+gem 'pry'
