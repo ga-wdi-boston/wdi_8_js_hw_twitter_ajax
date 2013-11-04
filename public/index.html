@@ -2,11 +2,17 @@
 <html lang='en'>
 <head>
   <meta charset='utf-8' />
-  <title>20 Last Tweets</title>
+  <title>Tweenty — find a user's twenty latest tweets</title>
   <link rel="stylesheet" type="text/css" href="public/style.css">
   <script type="text/javascript" src="public/main.js"></script>
 </head>
 <body>
-  <!-- content goes here -->
+  <form method='get' action=''>
+    Enter the Twitter username whose recent timeline you'd like to explore:
+    <input type='text' id='username-field' name='username' placeholder='@[USER NAME]' />
+    <input type='button' id='submit-button' value='submit' />
+  </form>
+
+  <ul id='tweenty-tweets'></ul>
 </body>
 </html>
