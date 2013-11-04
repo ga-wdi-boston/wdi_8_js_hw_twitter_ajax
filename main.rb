@@ -14,3 +14,11 @@ $twitter = Twitter::REST::Client.new do |config|
   config.access_token        = ENV["ACCESS_TOKEN"]
   config.access_token_secret = ENV["ACCESS_SECRET"]
 end
+
+binding.pry
+
+@tweets = $twitter.search("@QuotesByBlake", :count => 10, :result_type => "recent").collect do |tweet|
+    if tweet.lang == 'en'
+      "#{tweet.user.screen_name}: #{tweet.text}"
+    end
+  end
