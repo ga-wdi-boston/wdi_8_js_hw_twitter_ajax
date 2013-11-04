@@ -29,7 +29,7 @@ var render_tweets = function(tweets_json) {
 
 var ajaxRequest = function(user) {
   var request = new XMLHttpRequest();
-  url = '/twitter/' + user;
+  var url = '/twitter/' + user;
   request.open("GET", url, true);
   request.onload = function(e) {
     if(request.readyState === 4) {
