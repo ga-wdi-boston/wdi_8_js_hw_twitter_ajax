@@ -18,10 +18,12 @@ client = Twitter::REST::Client.new do |config|
 
 end
 
-get '/tweets/:screen_name' do 
-	client.user_timeline('screen_name').each do |t|
-		return t.text
+
+get '/tweets/:username' do 
+	recent_tweets = []
+	client.user_timeline(params[:screen_name]).each do |t|
+		recent_tweets << t.text
 	end
+	return recent_tweets.to_json
 end
 
-# binding.pry
