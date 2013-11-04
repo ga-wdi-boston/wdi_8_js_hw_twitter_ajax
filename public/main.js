@@ -43,7 +43,6 @@ var async_load_json = function(screen_name) {
 };
 
 var render_tweets = function(parsed_json) {
-	debugger;
 	var json_length,
 			tweet,
 			tweet_list,
@@ -58,4 +57,7 @@ var render_tweets = function(parsed_json) {
 	}
 };
  
-window.onload = function() {setButtonEvent();};
+window.onload = function() {
+  setButtonEvent();
+  fallingLeaves();
+};

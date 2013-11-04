@@ -2,10 +2,15 @@ li {
 	font-family: 'Snippet', sans-serif;
 }
 
-h1, form {
+h1 {
   font-family: 'Cherry Swash', cursive;
   
   color: #77591e;
+}
+
+form {
+	font-family: 'Cherry Swash', cursive;
+	color: #ffffff;
 }
 
 body {
@@ -34,3 +39,14 @@ body {
 #tweet_results li {
 	padding: 10px;
 }
+
+body {
+    top:0px;
+	background:#1E1E20 url(images/autumn.jpg) center top no-repeat;
+	color:#1E1E20;
+	font-size:13px;
+}
+
+img {border:none;}
+
+div img {border:none;}
