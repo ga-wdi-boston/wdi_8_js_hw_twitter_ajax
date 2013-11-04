@@ -61,7 +61,6 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.1.0)
     simple_oauth (0.2.0)
     sinatra (1.4.4)
       rack (~> 1.4)
@@ -89,11 +88,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   dotenv
   pg
   pry
-  rake
   sinatra
   sinatra-activerecord
   sinatra-reloader
