@@ -15,10 +15,10 @@ $twitter = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV["ACCESS_SECRET"]
 end
 
-binding.pry
-
-@tweets = $twitter.search("@QuotesByBlake", :count => 10, :result_type => "recent").collect do |tweet|
-    if tweet.lang == 'en'
-      "#{tweet.user.screen_name}: #{tweet.text}"
-    end
+get '/twitter/:id' do
+  tweets = []
+  $twitter.user_timeline(params[:id].to_s, count: 20, lang: "en").collect do |tweet|
+    tweets << tweet.text.to_s
   end
+  tweets.to_json
+end

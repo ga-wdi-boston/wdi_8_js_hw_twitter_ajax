@@ -6,9 +6,11 @@
 </head>
 <body>
   <h1>Twitter Search</h1>
-  <form id='search' style="display:block;">
-      <input type='text' />
-      <button id='search-button'>Search</button>
-    </form>
+  <form method="get" action="">
+    Twitter Handle: <input type="text" id="handle-field" name="handle"><br>
+    <input type="button" value="submit" id="submit" />
+  </form>
+  <ul id='tweets-list'>
+  </ul>
 </body>
 </html>
