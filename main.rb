@@ -21,12 +21,9 @@ end
 
 
 get '/tweets/:username' do
-	recent_tweets = []
+  recent_tweets = []
   client.user_timeline(params[:username]).each do |t|
   recent_tweets << t.text
   end
-  return recent_tweets.to_json 
+  return recent_tweets.to_json
 end
-
-
-
