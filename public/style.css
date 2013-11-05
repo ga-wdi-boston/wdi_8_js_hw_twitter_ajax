@@ -1,0 +1,26 @@
+body {
+	background-image: url("http://bwalles.com/wp-content/uploads/2013/05/Daft-Punk-Wallpapers-71.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	color: white;
+}
+
+#tweets li {
+	list-style-type: none;
+	padding: 10px;
+	display: block;
+}
+
+#title {
+	text-align: center;
+	font-family: 'Nosifer', cursive;
+}
+
+#form {
+	text-align: center;
+}
+
+#twitter-submit {
+	margin: 10px 0px;
+}
