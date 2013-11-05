@@ -1,9 +1,17 @@
 window.onload = function() {
   var submit_button = document.getElementById('submit-button');
+  var username_field = document.getElementById('username-field');
 
   submit_button.addEventListener('click', function(event) {
     event.preventDefault();
     submitButtonResponse();
+  });
+
+  submit_button.addEventListener('keypress', function(event) {
+    if (event && event.keyCode === 13) {
+      event.preventDefault();
+      submitButtonResponse();
+    }
   });
 
   submitButtonResponse = function() {
@@ -33,8 +41,11 @@ var ajax_request = function(user) {
 var render_tweets = function(tweets_json) {
   var tweets_html = "", 
       index = 0, 
-      length = tweets_json.length;
-      tweet_list = document.getElementById('tweenty-tweets');
+      length = tweets_json.length,
+      tweet_list;
+
+  document.getElementById('tweenty-tweets').innerHTML = "";
+  tweet_list = document.getElementById('tweenty-tweets');
 
   for (; index < length; ) {
     tweet_list.innerHTML += "<li>" + tweets_json[index] + "</li>";
