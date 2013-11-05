@@ -22,23 +22,13 @@ var load_json = function(screen_name) {
     }
   });
 };
-
-var render_tweets = function(tweet_string) {
-	var tweets_length,
-			tweet,
-			tweet_list,
-			i = 0;
-  var tweets = $.parseJSON(tweet_string)
-  tweets_length = tweets.length;
-	tweet_list = $('#tweet-list')[0];
-	tweet_list.innerHTML = '';
-	for(;i < tweets_length;) {
-		tweet = tweets[i];
-		tweet_list.innerHTML += ('<li>' + tweet + '</li>');
-		i = i + 1;
-	}
-};
  
+var render_tweets = function(tweet_string) {
+  var tweets = $.parseJSON(tweet_string);
+  $.each(tweets, function(index, tweet) {
+    $('#tweet-list').append('<li class="one-tweet">' + tweet + '</li>');
+  })
+};
 
 $(function() {
   setButtonEvent();

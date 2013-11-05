@@ -34,9 +34,10 @@ body {
 	padding: 40px;
 	border: 2px #a66e01 solid;
 	min-height: 500px;
+	text-align: left;
 }
 
-#tweet_results li {
+.one-tweet {
 	padding: 10px;
 }
 
