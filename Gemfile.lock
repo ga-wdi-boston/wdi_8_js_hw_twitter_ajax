@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     backports (3.3.5)
     buftok (0.1)
