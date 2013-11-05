@@ -1,0 +1,53 @@
+li {
+	font-family: 'Snippet', sans-serif;
+}
+
+h1 {
+  font-family: 'Cherry Swash', cursive;
+  
+  color: #77591e;
+}
+
+form {
+	font-family: 'Cherry Swash', cursive;
+	color: #ffffff;
+}
+
+body {
+	background-color: #efcf90;
+	text-align: center;
+}
+
+#header-box {
+	max-width: 800px;
+	margin: auto;
+	text-align: center;
+	background-color: #ffbf40;
+	border: 2px #a66e01 solid;
+}
+
+#tweet_results {
+	max-width: 600px;
+	margin: auto;
+	background-color: #ffffff;
+	color: #ffaa02;
+	padding: 40px;
+	border: 2px #a66e01 solid;
+	min-height: 500px;
+	text-align: left;
+}
+
+.one-tweet {
+	padding: 10px;
+}
+
+body {
+    top:0px;
+	background:#1E1E20 url(images/autumn.jpg) center top no-repeat;
+	color:#1E1E20;
+	font-size:13px;
+}
+
+img {border:none;}
+
+div img {border:none;}
