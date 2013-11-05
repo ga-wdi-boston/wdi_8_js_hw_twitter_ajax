@@ -7,13 +7,6 @@ window.onload = function() {
     submitButtonResponse();
   });
 
-  submit_button.addEventListener('keypress', function(event) {
-    if (event && event.keyCode === 13) {
-      event.preventDefault();
-      submitButtonResponse();
-    }
-  });
-
   submitButtonResponse = function() {
     var form = document.getElementById('username-field');
     var username = form.value;
