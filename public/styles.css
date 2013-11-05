@@ -1,0 +1,21 @@
+body {
+  background: url('http://24.media.tumblr.com/71845357e2e380a3b50b319c6c61f144/tumblr_mq6140uVD01qzxlygo1_1280.jpg');
+font-family: 'Sintony', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#all-text {
+  width: 900px;
+  padding-bottom: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+  background-color: rgba(133,212,255,0.6);
+}
