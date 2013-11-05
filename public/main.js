@@ -1,27 +1,14 @@
-
 'use strict';
-// // BLOCKING REQUEST
-// var load_json = function(url) {
-// 	var request = new XMLHttpRequest();
-// 	request.open('GET', url, false);
-// 	request.send(null);
- 
-// 	if (request.status === 200) {
-// 		// console.log(request.responseText);
-// 		return request.responseText;
-// 	}
-// };
 
 var setButtonEvent = function() {
-	var button = document.getElementById('search-button');
-  button.addEventListener('click', function(e){
+	$('#search-button').click(function(e){
     e.preventDefault();
     get_user_input();
   });
 };
 
 var get_user_input = function(username) {
-	var search_box = document.getElementById('search-box');
+	var search_box = $('#search-box')[0];
   var screen_name = search_box.value;
   async_load_json(screen_name);
 };
