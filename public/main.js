@@ -1,7 +1,7 @@
 var setButtonEvent = function() {
 	var search_button = document.getElementById("search-button");
-	search_button.addEventListener('click', function(e){
-		e.preventDefault();
+	search_button.addEventListener('click', function(event){
+		event.preventDefault();
 		get_user_input();
 	});
 };
