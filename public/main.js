@@ -29,12 +29,11 @@ var render_tweets = function(data) {
 	tweet_list = document.getElementById('tweet-list');
 	tweet_list.innerHTML = '';
 	for(;i < json_length;) {
-		tweet = tweets[i];
+		tweet = parsed_json[i];
 		tweet_list.innerHTML += ('<li>' + tweet + '</li>');
 		i = i + 1;
 	}
 };
-
 $(function() {
   setButtonEvent();
 });
