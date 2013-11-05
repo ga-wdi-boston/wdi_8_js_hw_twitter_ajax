@@ -9,8 +9,8 @@ require 'sinatra/activerecord'
 
 Dotenv.load
 set :server, 'webrick'
-set :public, 'public' 
-enable :static
+# set :public, 'public' 
+# enable :static
 
 client = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV["CONSUMER_KEY"]
