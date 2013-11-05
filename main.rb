@@ -3,12 +3,11 @@ require 'pry'
 require 'dotenv'
 require 'sinatra'
 require 'sinatra/reloader'
-
+Dotenv.load
 set :server, 'webrick'
-set :public, 'public' 
+set :public, 'public'
 enable :static
 
-Dotenv.load
 
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 

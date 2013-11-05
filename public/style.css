@@ -33,7 +33,7 @@ body {
 	color: #ffaa02;
 	padding: 40px;
 	border: 2px #a66e01 solid;
-	height: 500px;
+	min-height: 500px;
 }
 
 #tweet_results li {
