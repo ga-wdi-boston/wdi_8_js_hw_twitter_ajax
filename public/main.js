@@ -8,9 +8,7 @@ var setButtonEvent = function() {
 };
 
 var get_user_input = function() {
-	var search_box = $('#search-box')[0];
-  var screen_name = search_box.value;
-  load_json(screen_name);
+  load_json($('#search-box').val());
 };
 
 var load_json = function(screen_name) {
@@ -25,39 +23,24 @@ var load_json = function(screen_name) {
   });
 };
 
-// var async_load_json = function(screen_name) {
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('GET', "/tweets/" + screen_name, true);
-//   xhr.onload = function(e) {
-//     if(xhr.readyState === 4) {
-//       if(xhr.status === 200) {
-//         var parsed_json = JSON.parse(xhr.responseText);
-//         render_tweets(parsed_json);
-//       } else {
-//       	console.error(xhr.statusText);
-//       }
-//     }
-//   };
-//   xhr.send(null);
-// };
-
 var render_tweets = function(tweet_string) {
-	var json_length,
+	var tweets_length,
 			tweet,
 			tweet_list,
 			i = 0;
   var tweets = $.parseJSON(tweet_string)
-	json_length = tweets.length;
+  tweets_length = tweets.length;
 	tweet_list = $('#tweet-list')[0];
 	tweet_list.innerHTML = '';
-	for(;i < json_length;) {
+	for(;i < tweets_length;) {
 		tweet = tweets[i];
 		tweet_list.innerHTML += ('<li>' + tweet + '</li>');
 		i = i + 1;
 	}
 };
  
-window.onload = function() {
+
+$(function() {
   setButtonEvent();
   fallingLeaves();
-};
+});
