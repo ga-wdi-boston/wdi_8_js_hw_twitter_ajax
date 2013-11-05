@@ -5,7 +5,8 @@ require 'twitter'
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sinatra/activerecord'
-# require_relative 'config/twitter'
+
+# on heroku: http://damp-depths-1033.herokuapp.com
 
 Dotenv.load
 set :server, 'webrick'
