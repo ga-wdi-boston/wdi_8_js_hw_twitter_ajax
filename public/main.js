@@ -1,6 +1,5 @@
 var setButtonEvent = function() {
-	var search_button = $("#search-button")[0];
-	search_button.addEventListener('click', function(event){
+$("#search-button").click(function(event){
 		event.preventDefault();
 		get_user_input();
 	});
