@@ -7,7 +7,7 @@ require 'sinatra/reloader'
 # set :server, 'webrick'
 # set :public, 'public' 
 
-enable :static
+# enable :static
 
 Dotenv.load
 
