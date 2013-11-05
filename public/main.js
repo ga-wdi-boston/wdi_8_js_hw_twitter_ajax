@@ -29,7 +29,7 @@ var render_tweets = function(data) {
 	tweet_list = document.getElementById('tweet-list');
 	tweet_list.innerHTML = '';
 	for(;i < json_length;) {
-		tweet = parsed_json[i];
+		tweet = tweets[i];
 		tweet_list.innerHTML += ('<li>' + tweet + '</li>');
 		i = i + 1;
 	}
