@@ -4,6 +4,7 @@ require 'twitter'
 require 'sinatra'
 require 'sinatra/reloader'
 set :server, 'webrick'
+set :public, 'public' 
 Dotenv.load
 
 client = Twitter::REST::Client.new do |config|
