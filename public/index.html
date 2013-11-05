@@ -7,13 +7,16 @@
   <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
+  <h1>Tweenty</h1>
+  <h3>Exploring one Twitter user's recent timeline twenty tweets at a a time</h3>
   <form method='get' action=''>
-    Enter the Twitter username whose recent timeline you'd like to explore: @
-    <input type='text' id='username-field' name='username' placeholder='[USER NAME]' />
+    @<input type='text' id='username-field' name='username' placeholder='[TWITTER NAME]' /><br />
     <!--input type='submit' id='submit-button' value='submit' /-->
-    <button id='submit-button'>Submit</button>
+    <button id='submit-button'>Tweentify!</button>
   </form>
 
-  <ul id='tweenty-tweets'></ul>
+  <div id="tweet-container">
+    <ul id='tweenty-tweets'></ul>
+  </div>
 </body>
 </html>
