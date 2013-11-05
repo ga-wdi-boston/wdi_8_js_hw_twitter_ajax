@@ -4,10 +4,10 @@ require 'dotenv'
 require 'sinatra'
 require 'sinatra/reloader'
 
-# set :server, 'webrick'
-# set :public, 'public' 
+set :server, 'webrick'
+set :public, 'public' 
 
-# enable :static
+enable :static
 
 Dotenv.load
 
