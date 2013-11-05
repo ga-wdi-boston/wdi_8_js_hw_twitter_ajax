@@ -5,9 +5,10 @@ require 'twitter'
 require 'dotenv'
 Dotenv.load
 set :server, 'webrick'
+set :public, 'public'
 
 def twitter_auth
-  client = Twitter::REST::Client.new do |config|
+  client ||= Twitter::REST::Client.new do |config|
     config.consumer_key        = ENV["CONSUMER_KEY"]
     config.consumer_secret     = ENV["CONSUMER_SECRET"]
     config.access_token        = ENV["ACCESS_TOKEN"]
@@ -23,5 +24,3 @@ end
 get '/:username.json' do
   return twitter_search(params[:username]).to_json
 end
-
-# bundle exec rackup

@@ -1,3 +1,21 @@
+window.onload = function() {
+	var searchButton = document.getElementById('search-button');
+	var searchField = document.getElementById('username-field');
+	searchButton.addEventListener('click', function(event) {
+		event.preventDefault();
+		async_load_json(searchField.value + '.json');
+	});
+};
+
+var list_tweets = function(parsed_tweets) {
+	var tweetList = document.getElementById('tweetlist');
+	tweetList.innerHTML = "";
+	var i = 0; for(; i < parsed_tweets.length; i++) {
+		tweetList.innerHTML += "<li>" + parsed_tweets[i] + "</li>";
+	};
+};
+
+
 var async_load_json = function(url) {
 	var parsed_json, xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
@@ -13,24 +31,3 @@ var async_load_json = function(url) {
 	};
 	xhr.send(null);
 };
-
-var list_tweets = function(parsed_tweets) {
-	var tweetList = document.getElementById('tweetlist');
-	tweetList.innerHTML = "";
-
-	var i = 0; for(; i < parsed_tweets.length; i++) {
-		tweetList.innerHTML += "<li>" + parsed_tweets[i] + "</li>";
-	};
-};
-
-var eventListeners = function() {
-	var searchButton = document.getElementById('search-button');
-	var searchField = document.getElementById('username-field');
-
-	searchButton.addEventListener('click', function(event) {
-		event.preventDefault();
-		async_load_json(searchField.value + '.json');
-	});
-}
-
-eventListeners();
