@@ -16,16 +16,17 @@ window.onload = function(){
 
 ////
 var render_tweets = function(tweets_json){
-      var i = 0,
+      var i = 0, tweet,
       max = tweets_json.length,
       tweet_list = document.getElementById('tweets');
 
   for (;i< max;){
-    tweet_list.innerHTML += "<li>" + tweets_json[i].text + "</li>";
+    tweet = tweets_json[i]
+    tweet_list.innerHTML += "<li>" + tweet + "</li>";
     i = i + 1;
 
   }
-  document.getElementById('tweets').innerHTML += tweet_list;
+  // document.getElementById('tweets').innerHTML += tweet_list;
 };
 
 
