@@ -4,6 +4,8 @@ require 'sinatra/reloader' if development?
 require 'twitter'
 require 'dotenv'
 set :server, 'webrick'
+set :public, 'public'
+enable :static
 
 Dotenv.load
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
