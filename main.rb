@@ -19,6 +19,10 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV["ACCESS_SECRET"]
 end
 
+get '/' do
+  redirect '/index.html'
+end
+
 # Gets :user's 20 most recent tweets text
 get '/recent/:user' do
   client.user_timeline(params[:user]).map(&:text).to_json
