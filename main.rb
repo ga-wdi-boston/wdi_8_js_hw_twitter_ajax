@@ -20,6 +20,9 @@ client = Twitter::REST::Client.new do |config|
 
 end
 
+get '/' do 
+	redirect_to "/index.html"
+end
 
 get '/tweets/:username' do 
 	recent_tweets = []
