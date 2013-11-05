@@ -5,7 +5,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 # set :server, 'webrick'
-set :public, 'public' 
+# set :public, 'public' 
 
 enable :static
 
