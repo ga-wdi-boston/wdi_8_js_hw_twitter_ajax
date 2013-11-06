@@ -1,18 +1,20 @@
-//jQuery(document).ready(function() {
-  window.onload = function() {
-    var submit_button = $('#submit-button')[0];
-    var username_field = $('#username-field')[0];
+$(function() {
+  // var submit_button = $('#submit-button')[0];
+  // var username_field = $('#username-field')[0];
 
-    submit_button.addEventListener('click', function(event) {
-      event.preventDefault();
-      submitButtonResponse();
-    });
+  // submit_button.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   submitButtonResponse();
+  // });
+  $('#submit-button').click(function(event) {
+    event.preventDefault();
+    submitButtonResponse();
+  });
 
-    submitButtonResponse = function() {
-      var form = document.getElementById('username-field');
-      var username = form.value;
-      ajax_request(username);
-    };
+  submitButtonResponse = function() {
+    var form = document.getElementById('username-field');
+    var username = form.value;
+    ajax_request(username);
   };
 
   var ajax_request = function(user) {
@@ -46,4 +48,4 @@
       index += 1;
     }
   };
-//});
+});
