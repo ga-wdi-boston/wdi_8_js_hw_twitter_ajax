@@ -7,15 +7,18 @@ $(document).ready(function() {
 
 
 var render_tweets = function(json) {
-  var tweet_html = "";
-    var i = 0;
-    for (; i < json.length; i++){
-      var tweet;
-      tweet = json[i];
-      var j = i + 1;
-      tweet_html += "<li>" + j + ". " + tweet +  "</li>"
-    };
-    $('#tweets-list').append(tweet_html);
+  $(json).each(function(index, tweet) {
+    $('#tweets-list').append("<li>" + tweet +  "</li>");
+  });
+  // var tweet_html = "";
+  //   var i = 0;
+  //   for (; i < json.length; i++){
+  //     var tweet;
+  //     tweet = json[i];
+  //     var j = i + 1;
+  //     tweet_html += "<li>" + j + ". " + tweet +  "</li>"
+  //   };
+  //   $('#tweets-list').append(tweet_html);
 };
 
 var ajaxRequest = function(user) {
