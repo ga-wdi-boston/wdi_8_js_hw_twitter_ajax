@@ -7,6 +7,11 @@ $(document).ready(function() {
 
 var render_tweets = function(tweets_json) {
   var tweets_array = $.parseJSON(tweets_json);
+  // option 1
+  //  $.each(tweets_array, function(index, tweet) {
+  //   $('#tweets').append("<li>" + tweet + "</li>");
+  // });
+  // option 2
   $(tweets_array).each(function(index, tweet) {
     $('#tweets').append("<li>" + tweet + "</li>");
   });
@@ -21,3 +26,5 @@ var ajaxRequest = function(user) {
     } 
   });
 };
+
+
