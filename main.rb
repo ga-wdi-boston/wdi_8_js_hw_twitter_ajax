@@ -28,5 +28,3 @@ end
 get '/recent/:user' do
   client.user_timeline(params[:user]).map(&:text).to_json
 end
-
-
