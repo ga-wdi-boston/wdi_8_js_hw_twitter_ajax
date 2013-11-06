@@ -15,7 +15,7 @@ var render_tweets = function(json) {
       var j = i + 1;
       tweet_html += "<li>" + j + ". " + tweet +  "</li>"
     };
-    document.getElementById('tweets-list').innerHTML = tweet_html;
+    $('#tweets-list').append(tweet_html);
 };
 
 var ajaxRequest = function(user) {
