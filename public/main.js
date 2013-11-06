@@ -6,14 +6,10 @@ $(document).ready(function() {
 });
 
 var render_tweets = function(tweets_json) {
-  var tweets_array = $.parseJSON(tweets_json)
-  tweets_html = ""
-  i = 0;
-  for (; i < tweets_array.length; i++){
-    var tweet_text = tweets_array[i];
-    tweets_html += "<li>" + tweet_text + "</li>"
-  };
-  $('#tweets').append(tweets_html);
+  var tweets_array = $.parseJSON(tweets_json);
+  $(tweets_array).each(function(index, tweet) {
+    $('#tweets').append("<li>" + tweet + "</li>");
+  });
 };
 
 var ajaxRequest = function(user) {
