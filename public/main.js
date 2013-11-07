@@ -16,16 +16,11 @@ var ajax_request = function(user) {
 };
 
 var render_tweets = function(tweets_json) {
-  var tweets = $.parseJSON(tweets_json),
-      tweets_html = "",
-      index = 0, 
-      length = tweets.length;
+  var tweets = $.parseJSON(tweets_json);
 
-  $("#tweenty-tweets").empty();
+  $('#tweenty-tweets').empty();
 
-  for (; index < length; ) {
-    tweets_html += "<li>" + tweets[index] + "</li>";
-    index += 1;
-  }
-  $("#tweenty-tweets").append(tweets_html);
+  $(tweets).each(function(index, tweet) {
+    $('#tweenty-tweets').append("<li>" + tweet + "</li>")
+  });
 };
