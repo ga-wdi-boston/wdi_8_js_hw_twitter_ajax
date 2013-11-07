@@ -1,0 +1,21 @@
+body {
+  font-family: Gill Sans, Helvetica, sans serif;
+  text-align: center;
+  background: rgba(64, 153, 255, 0.7);
+}
+
+#tweet-container {
+  width: 520px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  border-left: 450px;
+}
+
+li {
+  padding: 20px;
+  border: 1px solid black;
+  text-align: justify;
+}
