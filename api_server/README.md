@@ -1,39 +1,42 @@
-![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+# Ajax, Rails and Twitter Lab
 
-# Assignment Name (Ruby String Lab)
+The goal of this lab is to have you exercise building a basic Restful API to wrap an external API (Twitter) with Rails
 
-## Objectives
+## Assignment
 
-By the end of this, students should be able to:
+In this assignment, you'll create a Twitter client in JavaScript that will show the last ~20 Tweets for any public Twitter user, consuming an API that you build in Rails.
 
-- Objective 1
-- Objective 2
-- Objective 3
+The user will be presented with a 'search' box where they can input a valid Twitter username and hit 'search'. They will then be presented with a formatted list of Tweets that display asyncronously in the HTML.
 
-## Instructions
+Once you have completed this assignment, make this look great with CSS.
 
-Include explict step-by-step instructions about the goals of the assignment, and how to run the code.
+### How
 
-Make sure to wrap section of code in appropriate markdown like `ls -al`, and denote the language as below for longer sections:
+- Create a developer account and application on Twitter, and get access to your API keys. Store these *securely* in Rails.
+- Use Rails along with the [Twitter gem](https://github.com/sferik/twitter) to access Twitter.
+- Use a simple HTML form to send a `GET` request to the Rails API, asking for `json` to be returned. *You'll have to remember how to use events triggered by form button input*.
+- Use a `callback` to display the tweets on screen.
 
-```ruby
-x = 2
-y = 3
-puts x + y
-```
+### About the Static Client directory
 
-## Bonus (Optional Section)
+I've used [Yeoman](yeoman.io) to scaffold this directory. The part you modify is in the app directory. You'll want to run `grunt serve` which will then open a web browser for you, automatically refresh changes, and run a javascript linter on your code every time you save (kinda awesome right?).
 
-If you're looking for extra challenge or practice once you've completed the above, try to...
+Its got jQuery and Bootstrap built in already, but doesn't force you into any other structure. Don't mess with the bower and Grunt configuration for the moment, as it isn't needed and will make things more complicated.
 
-## Notes
+### Hints
 
-Gotcha's and extra information
+- Don't check your Twitter API keys into version control
+- Make sure you use a good JavaScript pattern (namespace or module) to structure your app.
+- Consider how you might document this API
+- How would you test this with Rspec and *request specs*. How do you test the jQuery with Jasmine?
+- How can you fake the API until you make it work?
+- No database is needed in your Rails API
 
-## Additional Resources
+## Reading
 
-List additional related resources such as videos, blog posts and official documentation.
+- JavaScript: Definitive Guide, Chapter 18, Section 1
 
-- Item 1
-- Item 2
-- Item 3
+## Bonus
+
+- Figure out how to deploy this Rails application to Heroku, and the static assets to Github Pages
+- Figure out how to use events to create an infinite scroll of the user's tweets
