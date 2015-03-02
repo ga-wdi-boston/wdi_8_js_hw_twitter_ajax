@@ -87,3 +87,10 @@ body {
     border-bottom: 0;
   }
 }
+
+.search-tweets {
+  margin-top: 25px;
+}
+.search-username {
+  margin-bottom: 15px;
+}
