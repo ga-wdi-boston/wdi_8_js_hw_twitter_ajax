@@ -87,3 +87,8 @@ body {
     border-bottom: 0;
   }
 }
+
+.tweet {
+  background-color: #DDDDDD;
+  margin: 10px 0;
+}
