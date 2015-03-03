@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>static_client</title>
+    <title>#wtf!</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -32,10 +32,24 @@
         <h3 class="text-muted">static_client</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+      <div class="jumbotron" id="jumbo">
+        <h1>What the F@$% is @patneedham_ Tweeting??</h1>
+        <p class="lead">Probably something interesting...</p>
+
+        <form class="form-inline">
+          <input type="text" class="form-control" id="handleInput" placeholder="Do not include the '@'">
+          <a id="btnMain" class="btn btn-lg btn-success" >Splendid! <span class="glyphicon glyphicon-ok"></span></a>
+        </form>
+
+      </div>
+
+      <div id='tweet-list'>
+
+      </div>
+
+      <div id="tweetbot">
+        <a class="twitter-timeline" href="https://twitter.com/patneedham_" data-widget-id="572560535649275904">Tweets by @patneedham_</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
 
       <div class="row marketing">
@@ -74,6 +88,8 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
         <!-- build:js(.) scripts/plugins.js -->
         <script src="bower_components/bootstrap/js/affix.js"></script>

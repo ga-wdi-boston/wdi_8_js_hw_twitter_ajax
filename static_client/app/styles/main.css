@@ -87,3 +87,15 @@ body {
     border-bottom: 0;
   }
 }
+
+#tweetbot {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#puppyFail {
+  height: 563px;
+  width: 458px;
+  margin-top: 10px;
+}
