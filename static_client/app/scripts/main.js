@@ -1,5 +1,6 @@
 'use strict';
 
+var App = App || {};
 var $jumbo = $('#jumbo');
 var $tweetList = $('#tweet-list');
 var $search = $('#handleInput')
@@ -19,8 +20,6 @@ $(document).ready(function(){
   });
 });
 
-var App = App || {};
-
 App.MyTweets = function(event){
   event.preventDefault();
   $.ajax({
@@ -36,7 +35,7 @@ App.MyTweets = function(event){
       html += "</div>";
       $tweetList.append(html);
 
-      // wanted to be able to change the widget's user lookup here --v
+      // wanted to be able to change the widget's user lookup here, denied by twitter --v
       // var tweetz = "<a class='twitter-timeline' href='https://twitter.com/" + $search.val() + "' data-widget-id='572560535649275904'>Tweets by @$search.val()</a>";
       // $jumbo.append(tweetz);
 
@@ -47,9 +46,9 @@ App.MyTweets = function(event){
     console.log("try using better code");
     var puppy = "<img id='puppyFail' src='http://www.goodmeme.net/wp-content/uploads/2014/07/240_cute_dog_driving.jpg' alt='Smiley face'>"
     $jumbo.append(puppy);
-    setTimeout(function(){
-      location.reload();
-    }, 5000;
+    // setTimeout(function(){
+    //   location.reload();
+    // }, 5000;
   });
 
 }
