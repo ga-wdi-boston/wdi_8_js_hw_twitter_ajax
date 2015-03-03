@@ -17,21 +17,21 @@ TwitterApp.findTweet = function(){
       url: 'http://localhost:3000/users/' + name,
       type: 'GET'
     }).done(function(data){
-      TwitterApp.displayTweets(data);
+      TwitterApp.displayTweets(data.tweets);
     });
 };
 
-TwitterApp.displayTweets = function(data){
-  for (var i = 0; i < data.tweets.length; i++){
-    TwitterApp.displayTweet(data.tweets[i]);
+TwitterApp.displayTweets = function(tweets){
+  for (var i = 0; i < tweets.length; i++){
+    TwitterApp.displayTweet(tweets[i]);
   }
 };
 
 TwitterApp.displayTweet = function(tweet){
-  $('#tweets').append(TwitterApp.addLinks(tweet));
+  $('#tweets').append(TwitterApp.format(tweet.text));
 };
 
-TwitterApp.addLinks = function(text){
+TwitterApp.format = function(text){
   var textAr = text.split(' ');
   for (var i = 0; i < textAr.length; i++){
     if (textAr[i].slice(0,7) === 'http://'){
