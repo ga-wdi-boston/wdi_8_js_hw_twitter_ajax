@@ -8,7 +8,7 @@ var trace = function(){
 
 var App = (function(){
   var init = function(){
-    getTweets('TweetsOfGrass'); //default tweets
+    getTweets('TweetsOfGrass'); //default tweets from whitman
 
     var $userForm = $('form#user-form');
     $userForm.on('submit',function(e){
@@ -31,7 +31,7 @@ var App = (function(){
   var showTweets = function(tweets, username){
 
     $('#tweets').children().remove();
-    $('#tweets').append('<h4>Tweets from '+ username)
+    $('#tweets').append('<h3>Tweets from '+ username + '</h3>')
     tweets.forEach(function(tweet){
       $('#tweets').append('<li>' + tweet + '</li>');
     });
