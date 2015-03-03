@@ -2,8 +2,8 @@ class TweetsController < ApplicationController
 
   def show
     user_name = params[:id]
-    tweet = TwitterClient.user_timeline(user_name).map(&:text)
-    render json: {tweets: tweet}
+    tweets = TwitterClient.user_timeline(user_name)#.map(&:text)
+    render json: {tweets: tweets}, status: 200
   end
 
 end
