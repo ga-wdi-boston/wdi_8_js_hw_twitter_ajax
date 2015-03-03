@@ -7,11 +7,12 @@ $(document).ready(function(){
     console.log("app: GET success");
     console.log("number of tweets: " + tweets.length);
     console.log(tweets);
-    $('#tweets_div').append(tweets);
+
+    $('#tweets_div').append(tweets.tweets);
 
     //loop through elements in tweets array
-    // tweets.forEach(function(tweet){
-    //   $('.tweets_div').append(tweet);
+    // tweets.forEach(function(tweets){
+    //   $('.tweets_div').append('<p>' + tweet.tweets + '</p>');
     // });
 
 // debugger;
