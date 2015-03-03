@@ -14,6 +14,7 @@ $(document).ready(function(){
 
   $('#submit').on('click', function(){
     event.preventDefault();
+    $('#tweets').empty();
     var $value = $('#twitter-user').val()
     TwitterApp.getTweets($value);
   });

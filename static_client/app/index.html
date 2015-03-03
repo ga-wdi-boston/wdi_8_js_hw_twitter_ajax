@@ -23,34 +23,22 @@
 
 
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">static_client</h3>
-      </div>
 
       <div class="jumbotron">
-        <h1>Do some Twitter stalking! Enter an account</h1>
-        <div class="forms">
-        <div class="twitter-form">
-          <form id="new-post-form">
-            <div class="form-group">
-              <input name="twitter-user" type="text" placeholder=" Username" id='twitter-user' />
-            </div>
-            <div class="form-group">
-              <input type="submit" id='submit' value="Find User" />
-            </div>
-          </form>
+        <h1>Do some Twitter stalking! Enter a Twitter Handle</h1>
+
+      <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input name="twitter-user" class="form-control" type="text" placeholder="Username" id='twitter-user' />
+          </div>
         </div>
-      </div>
+        <button type="submit" id="submit" class="btn btn-primary">Find User</button>
+      </form>
 
       <div id="tweets"></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
 
     </div>
