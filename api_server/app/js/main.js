@@ -1,0 +1,1 @@
+var TwitterApp = TwitterApp || {};
