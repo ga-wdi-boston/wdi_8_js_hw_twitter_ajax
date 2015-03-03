@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 gem 'rails', '4.2.0'
 gem 'rails-api'
-gem 'spring', group: :development
+# gem 'spring', group: :development
+gem 'rb-readline'
 gem 'pg'
+gem 'twitter'
 gem 'newrelic_rpm'
 gem 'rack-cors'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
