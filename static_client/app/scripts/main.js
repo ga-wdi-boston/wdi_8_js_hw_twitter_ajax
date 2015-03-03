@@ -10,6 +10,8 @@ $(document).ready(function(){
 
   var $bigButton = $('#btnMain');
   $bigButton.on('click', function(){
+  // var $formSubmit = $('form#form-inline');
+  // $formSubmit.on('click', function(){
     App.MyTweets(event);
     console.log('you just clicked the button, cheers!');
     console.log($search.val());
@@ -19,7 +21,8 @@ $(document).ready(function(){
 
 var App = App || {};
 
-App.MyTweets = function(){
+App.MyTweets = function(event){
+  event.preventDefault();
   $.ajax({
     url: 'http://localhost:3000/tweets/' + $search.val(),
     type: 'GET',
@@ -29,10 +32,11 @@ App.MyTweets = function(){
     console.log(data);
     for (var i = 0; i < data.tweets.length; i++) {
       var html = "<div class='tweet'>";
-      html += "<p>" + App.addLinks(data.tweets[i]) + "</p>";
+      html += "<p>" + App.addLinks(data.tweets[i].text) + "</p>";
       html += "</div>";
       $tweetList.append(html);
 
+      // wanted to be able to change the widget's user lookup here --v
       // var tweetz = "<a class='twitter-timeline' href='https://twitter.com/" + $search.val() + "' data-widget-id='572560535649275904'>Tweets by @$search.val()</a>";
       // $jumbo.append(tweetz);
 
@@ -43,6 +47,9 @@ App.MyTweets = function(){
     console.log("try using better code");
     var puppy = "<img id='puppyFail' src='http://www.goodmeme.net/wp-content/uploads/2014/07/240_cute_dog_driving.jpg' alt='Smiley face'>"
     $jumbo.append(puppy);
+    setTimeout(function(){
+      location.reload();
+    }, 5000;
   });
 
 }
