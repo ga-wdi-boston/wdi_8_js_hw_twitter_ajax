@@ -20,6 +20,7 @@ App.render_all_tweets = function(tweets){
   html += "<ul>";
   for(var i = 0; i < tweets.tweets.length; i++){
     html += "<li>" + tweets.tweets[i] + "</li>";
+    html += "<br>"
   };
   html += "</ul>";
   $('.tweets').append(html);
