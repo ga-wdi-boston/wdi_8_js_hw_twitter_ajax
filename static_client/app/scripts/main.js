@@ -5,5 +5,8 @@ console.log('\'Allo \'Allo!');
 var TwitterApp = TwitterApp || {};
 
 $(document).ready(function(){
-  TwitterApp.tweetsByUser.get();
+  // var $userForm = $('form#user-form');
+  // $userForm.on('submit', function(event) {
+    TwitterApp.tweetsByUser.get();
+  // });  
 });
