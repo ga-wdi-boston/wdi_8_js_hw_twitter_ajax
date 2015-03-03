@@ -28,11 +28,19 @@ TwitterApp.displayTweets = function(data){
 };
 
 TwitterApp.displayTweet = function(tweet){
-  var target = $('#tweets');
-  var newItem = $('<li>');
-  newItem.text(tweet);
-  target.append(newItem);
+  $('#tweets').append(TwitterApp.addLinks(tweet));
 };
+
+TwitterApp.addLinks = function(text){
+  var textAr = text.split(' ');
+  for (var i = 0; i < textAr.length; i++){
+    if (textAr[i].slice(0,7) === 'http://'){
+      textAr[i] = '<a href=' + textAr[i] + '>' + textAr[i] + '</a>';
+    }
+  }
+  return '<li>' + textAr.join(' ') + '</li>';
+};
+
 
 $(document).ready(function(){
   $('.btn').click(TwitterApp.populateField);
