@@ -87,3 +87,6 @@ body {
     border-bottom: 0;
   }
 }
+#user_name {
+  margin-bottom: 10px;
+}
