@@ -87,3 +87,22 @@ body {
     border-bottom: 0;
   }
 }
+/*styling CSS*/
+.tweets {
+  font-family: arial;
+  font-size: 15px;
+}
+
+#user_name {
+  width: 250px;
+  height: 45px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+#target {
+  width: 150px;
+  height: 45px;
+  padding: 8px;
+  /*line-height: 30px;*/
+  border-radius: 15px 15px 15px 15px;
+}
