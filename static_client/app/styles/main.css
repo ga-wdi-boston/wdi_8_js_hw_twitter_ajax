@@ -47,6 +47,7 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background: #F3FFE2;
 }
 
 .jumbotron .btn {
@@ -87,3 +88,14 @@ body {
     border-bottom: 0;
   }
 }
+/* styling CSS */
+
+  #displayAll{
+    font-family: helvetica;
+    font-size: 18px;
+    line-height: 22.5px;
+    list-style-type: none;
+    margin: 0 0 3px 0;
+  }
+
+
