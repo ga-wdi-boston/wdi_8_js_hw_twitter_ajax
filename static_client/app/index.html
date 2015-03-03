@@ -31,14 +31,22 @@
         </ul>
         <h3 class="text-muted">static_client</h3>
       </div>
-
+      <form id="user-form">
+        <div class="form-group">
+          <label for="username">Enter Username</label>
+          <input name="username" type="text" placeholder="Enter Username" id='username' />
+        </div>
+        <div class="form-group">
+          <input type="submit" id='submit' value="Create Post" />
+        </div>
+      </form>
       <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+       <ul id='tweets'></ul>
+        <!-- <p class="lead">Always a pleasure scaffolding your apps.</p>
+        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p> -->
       </div>
 
-      <div class="row marketing">
+     <!--  <div class="row marketing">
         <div class="col-lg-6">
           <h4>HTML5 Boilerplate</h4>
           <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
@@ -49,8 +57,8 @@
           <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
 
 
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
