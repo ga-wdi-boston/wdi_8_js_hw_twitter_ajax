@@ -50,7 +50,7 @@ TwitterApp.format = function(tweet){
   }
 
 
-  return '<li>' + "<img src=" + image + ">" + textAr.join(' ') + '</li>';
+  return "<img src=" + image + ">" + '<li class=row>' + textAr.join(' ') + '</li>';
 };
 
 
