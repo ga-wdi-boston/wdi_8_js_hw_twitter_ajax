@@ -6,6 +6,7 @@ gem 'spring', group: :development
 gem 'pg'
 gem 'newrelic_rpm'
 gem 'rack-cors'
+gem 'twitter'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'nokogiri'
 group :development, :test do
