@@ -1,10 +1,10 @@
 var App = App || {};
 
 App.getTweets = function(){
-  var $findTweets = $('#find-tweets').val();
-
+  var $twitterUser = $('#twitter-username').val();
+  debugger;
   $.ajax({
-    url: 'http://localhost:3000/tweets' + $findTweets,
+    url: 'http://localhost:3000/tweets/' + $twitterUser,
     type: 'GET',
     dataType: 'JSON'
   }).done(function(data){
