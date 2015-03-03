@@ -28,11 +28,11 @@ TwitterApp.displayTweets = function(tweets){
 };
 
 TwitterApp.displayTweet = function(tweet){
-  $('#tweets').append(TwitterApp.format(tweet.text));
+  $('#tweets').append(TwitterApp.format(tweet));
 };
 
-TwitterApp.format = function(text){
-  var textAr = text.split(' ');
+TwitterApp.format = function(tweet){
+  var textAr = tweet.text.split(' ');
   for (var i = 0; i < textAr.length; i++){
     if (textAr[i].slice(0,7) === 'http://'){
       textAr[i] = '<a href=' + textAr[i] + ' target=_blank>' + textAr[i] + '</a>';
@@ -44,7 +44,13 @@ TwitterApp.format = function(text){
       textAr[i] = '<a href=https://twitter.com/hashtag/' + textAr[i].replace(/[#]/g, '') + '?src=hash target=_blank>' + textAr[i] + '</a>';
     }
   }
-  return '<li>' + textAr.join(' ') + '</li>';
+  var image = tweet.user.profile_image_url;
+  if (tweet.retweeted_status){
+    image = tweet.retweeted_status.user.profile_image_url;
+  }
+
+
+  return '<li>' + "<img src=" + image + ">" + textAr.join(' ') + '</li>';
 };
 
 

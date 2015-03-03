@@ -90,3 +90,11 @@ body {
 #user_name {
   margin-bottom: 10px;
 }
+img {
+  width: 48px;
+  height: 48px;
+}
+
+li {
+  margin-bottom: 10px;
+}
