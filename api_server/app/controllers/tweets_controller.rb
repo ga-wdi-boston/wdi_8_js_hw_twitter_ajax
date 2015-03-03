@@ -1,4 +1,4 @@
-class TweetsContoller < ApplicationController
+class TweetsController < ApplicationController
 
   def show
     user_name = params[:id]

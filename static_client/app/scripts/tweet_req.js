@@ -2,10 +2,8 @@
 
 var TwitterApp = TwitterApp || {};
 
-var username = $('#user_name').val();
-
 TwitterApp.tweetsByUser = {
-  get: function(){
+  get: function(username){
     $.ajax({
       url: 'http://localhost:3000/tweets/' + username,
       dataType: 'json'
