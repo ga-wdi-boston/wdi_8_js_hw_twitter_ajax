@@ -3,16 +3,16 @@
 var App = App || {};
 var $jumbo = $('#jumbo');
 var $tweetList = $('#tweet-list');
-var $search = $('#handleInput')
+var $search = $('#handleInput');
 
 console.log('if you can read this, you are probably a web developer');
 
 $(document).ready(function(){
 
   var $bigButton = $('#btnMain');
+  $search.focus();
   $bigButton.on('click', function(){
-  // var $formSubmit = $('form#form-inline');
-  // $formSubmit.on('click', function(){
+    $tweetList.empty();
     App.MyTweets(event);
     console.log('you just clicked the button, cheers!');
     console.log($search.val());
@@ -40,11 +40,11 @@ App.MyTweets = function(event){
       // $jumbo.append(tweetz);
 
 
-    };
+    }
   })
   .fail(function() {
     console.log("try using better code");
-    var puppy = "<img id='puppyFail' src='http://www.goodmeme.net/wp-content/uploads/2014/07/240_cute_dog_driving.jpg' alt='Smiley face'>"
+    var puppy = "<img id='puppyFail' src='http://www.goodmeme.net/wp-content/uploads/2014/07/240_cute_dog_driving.jpg' alt='Smiley face'>";
     $jumbo.append(puppy);
     // setTimeout(function(){
     //   location.reload();

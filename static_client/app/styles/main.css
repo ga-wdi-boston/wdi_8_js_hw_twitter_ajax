@@ -1,14 +1,19 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.tweet {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #e1e8ed;
 }
 
 /* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #cceaf3;
+}
+
+.active {
+  background-color: #55acee;
+  border-radius: 6px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -47,11 +52,12 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background-color: #55acee;
 }
 
 .jumbotron .btn {
   font-size: 21px;
-  padding: 14px 24px;
+  padding: 10px 14px;
 }
 
 /* Supporting marketing content */
@@ -88,14 +94,20 @@ body {
   }
 }
 
-#tweetbot {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#widget {
+  margin-top: 30px;
+  text-align: center;
 }
 
 #puppyFail {
   height: 563px;
   width: 458px;
   margin-top: 10px;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
