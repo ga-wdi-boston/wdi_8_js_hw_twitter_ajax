@@ -40,7 +40,13 @@ App.MyTweets = function(event){
     console.log(data);
     for (var i = 0; i < data.tweets.length; i++) {
       var html = "<div class='tweet'>";
+      html += "<p>Retweets: " + data.tweets[i].created_at + "</p>";
       html += "<p>" + App.addLinks(data.tweets[i].text) + "</p>";
+      if (data.tweets[i].entities.media) {
+        html += "<p><img src='" + data.tweets[i].entities.media[0].media_url + "'></p>";
+      }
+      html += "<p>Retweets: " + data.tweets[i].retweet_count + "</p>";
+      html += "<p>Favorites: " + data.tweets[i].favorite_count + "</p>";
       html += "</div>";
       $tweetList.append(html);
     }
